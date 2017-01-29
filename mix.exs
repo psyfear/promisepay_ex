@@ -2,12 +2,23 @@ defmodule PromisepayEx.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :promisepay_ex,
-     version: "0.1.0",
-     elixir: "~> 1.4",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     deps: deps()]
+    [
+      app: :promisepay_ex,
+      version: "0.1.0",
+      elixir: "~> 1.4",
+      build_embedded: Mix.env == :prod,
+      start_permanent: Mix.env == :prod,
+      deps: deps(),
+
+      # Docs
+      name: "PromisepayEx",
+      source_url: "https://github.com/psyfear/promisepay_ex",
+      homepage_url: "https://github.com/psyfear/promisepay_ex",
+      docs: [
+        main: "PromisepayEx", # The main page in the docs
+        extras: ["README.md"]
+      ]
+    ]
   end
 
   # Configuration for the OTP application
@@ -32,6 +43,7 @@ defmodule PromisepayEx.Mixfile do
     [
       {:poison, "~> 3.1.0"},
       {:httpoison, "~> 0.11.0"},
+      {:ex_doc, "~> 0.14", only: :dev},
     ]
   end
 end
