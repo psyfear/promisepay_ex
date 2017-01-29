@@ -9,6 +9,8 @@ defmodule PromisepayEx.Mixfile do
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
       deps: deps(),
+      description: description(),
+      package: package(),
 
       # Docs
       name: "PromisepayEx",
@@ -45,5 +47,17 @@ defmodule PromisepayEx.Mixfile do
       {:httpoison, "~> 0.11.0"},
       {:ex_doc, "~> 0.14", only: :dev},
     ]
+  end
+
+  defp description do
+    """
+    Promisepay client library for elixir.
+    """
+  end
+
+  defp package do
+    [ maintainers: ["Carlos Casal", "Wilfrido Nuqui", "James Dela Cruz", "Jessie Espesor"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/psyfear/promisepay_ex"} ]
   end
 end
