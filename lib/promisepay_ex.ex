@@ -73,4 +73,39 @@ defmodule PromisepayEx do
   """
   @spec request(:get | :post, String.t, Keyword.t) :: Map
   defdelegate request(method, path, params), to: PromisepayEx.API.Base
+
+  # -------------- Items -------------
+
+  @doc """
+  Retrieve an ordered and paginated list of existing Items.
+
+  GET /items
+  
+  ## Reference
+
+      https://reference.promisepay.com/#list-items
+
+  ## Examples
+
+      PromisepayEx.items([limit: 10, offset: 1])
+
+  """
+  defdelegate items, to: PromisepayEx.API.Items
+  defdelegate items(params), to: PromisepayEx.API.Items
+
+  @doc """
+  Retrieve an item.
+
+  GET /items/:id
+  
+  ## Reference
+
+      https://reference.promisepay.com/#show-item
+
+  ## Examples
+
+      PromisepayEx.item('itemid')
+
+  """
+  defdelegate item(id), to: PromisepayEx.API.Items
 end
