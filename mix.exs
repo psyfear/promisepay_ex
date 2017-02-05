@@ -12,6 +12,11 @@ defmodule PromisepayEx.Mixfile do
       description: description(),
       package: package(),
 
+      # Tests
+      preferred_cli_env: [
+        vcr: :test, "vcr.delete": :test, "vcr.check": :test, "vcr.show": :test
+      ],
+
       # Docs
       name: "PromisepayEx",
       source_url: "https://github.com/psyfear/promisepay_ex",
@@ -46,6 +51,7 @@ defmodule PromisepayEx.Mixfile do
       {:poison, "~> 3.1.0"},
       {:httpoison, "~> 0.11.0"},
       {:ex_doc, "~> 0.14", only: :dev},
+      {:exvcr, "~> 0.8.7"},
     ]
   end
 
