@@ -18,7 +18,7 @@ defmodule PromisepayEx.Client do
   
   defp send_request(request, token) do
     headers = ["Authorization": "Basic #{token}", "Accept": "Application/json; Charset=utf-8"]
-    options = [ssl: [{:versions, [:'tlsv1.2']}], recv_timeout: 500]
+    options = [ssl: [{:versions, [:'tlsv1.2']}]]
     response = HTTPoison.get(request, headers, options)
     case response do
       {:ok, %HTTPoison.Response{status_code: 200, body: body, headers: headers}} ->
