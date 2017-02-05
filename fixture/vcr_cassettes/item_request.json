@@ -1,0 +1,43 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Authorization": "***",
+        "Accept": "Application/json; Charset=utf-8"
+      },
+      "method": "get",
+      "options": {
+        "ssl_options": {
+          "versions": [
+            "tlsv1.2"
+          ]
+        }
+      },
+      "request_body": "",
+      "url": "http://api.localhost.local:3000//items/chocoitem1?"
+    },
+    "response": {
+      "body": "{\"items\":{\"id\":\"chocoitem1\",\"name\":\"Sample item for CC payment\",\"description\":null,\"custom_descriptor\":null,\"created_at\":\"2016-12-15T05:44:32.589Z\",\"updated_at\":\"2016-12-15T05:46:23.742Z\",\"state\":\"completed\",\"net_amount\":101,\"chargedback_amount\":0,\"refunded_amount\":0,\"released_amount\":98,\"seller_url\":\"\",\"buyer_url\":\"\",\"remaining_amount\":0,\"status\":22500,\"amount\":101,\"payment_type_id\":2,\"due_date\":null,\"requested_release_amount\":0,\"pending_release_amount\":0,\"dynamic_descriptor\":\"100014012004933\",\"deposit_reference\":\"100014012004933\",\"buyer_fees\":10,\"seller_fees\":3,\"credit_card_fee\":0,\"direct_debit_fee\":0,\"paypal_fee\":0,\"promisepay_fee\":3,\"total_outstanding\":0,\"total_amount\":111,\"currency\":\"AUD\",\"payment_method\":\"credit card\",\"buyer_name\":\"Choco\",\"buyer_email\":\"chocobuyer@gmail.com\",\"buyer_country\":\"AUS\",\"seller_name\":\"Choco\",\"seller_email\":\"chocobuyer1@gmail.com\",\"seller_country\":\"AUS\",\"payment_credit_card_enabled\":true,\"payment_direct_debit_enabled\":false,\"related\":{\"buyers\":\"chocobuyer1\",\"sellers\":\"chocoseller1\"},\"links\":{\"self\":\"/items/chocoitem1\",\"buyers\":\"/items/chocoitem1/buyers\",\"sellers\":\"/items/chocoitem1/sellers\",\"status\":\"/items/chocoitem1/status\",\"fees\":\"/items/chocoitem1/fees\",\"transactions\":\"/items/chocoitem1/transactions\",\"batch_transactions\":\"/items/chocoitem1/batch_transactions\",\"wire_details\":\"/items/chocoitem1/wire_details\",\"bpay_details\":\"/items/chocoitem1/bpay_details\",\"tds_checks\":\"/items/chocoitem1/tds_checks\"}}}",
+      "headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, Content-Type, Accept, Authorization, Token",
+        "Access-Control-Allow-Methods": "POST, GET, PUT, DELETE, OPTIONS",
+        "Access-Control-Max-Age": "1728000",
+        "Access-Control-Request-Method": "*",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"aea559c821aed09589d2d63d36c5ee4a\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "7fdc15c4-1b0c-4449-9ee4-46d478db01ba",
+        "X-Runtime": "0.566364",
+        "Connection": "close",
+        "Server": "thin"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
