@@ -11,12 +11,14 @@ defmodule PromisepayEx.API.Items do
     items([])
   end
 
+  @spec items(Keyword.t) :: Keyword.t
   def items(options) do
     params = PromisepayEx.Parser.parse_request_params(options)
-    %{items: items} = request(:get, "items/", params)
-    Enum.map(items, &PromisepayEx.Parser.parse_item/1)
+    %{items: item_results} = request(:get, "items/", params)
+    Enum.map(item_results, &PromisepayEx.Parser.parse_item/1)
   end
 
+  @spec item(String.t) :: PromisepayEx.Model.Item.t
   def item(id) do
     %{items: item} = request(:get, "/items/#{id}", [])
     PromisepayEx.Parser.parse_item(item)

@@ -6,6 +6,7 @@ defmodule PromisepayEx.API.Base do
   @doc """
   Send request to the promisepay server specified by the configuration value api_domain.
   """
+  @spec request(:get, String.t, Keyword.t) :: Map.t
   def request(method, path, params \\ []) do
     perform_request(method, path, params)
   end
@@ -26,17 +27,21 @@ defmodule PromisepayEx.API.Base do
     end
   end
 
+  @spec verify_params([]) :: Map.t
   def verify_params([]) do
     raise PromisepayEx.Error,
       message: "Auth parameters are not set. Use PromisepayEx.configure function to set parameters in advance."
   end
 
+  @spec verify_params(Map.t) :: Map.t
   def verify_params(params), do: params
 
+  @spec request_url(String.t, String.t) :: String.t
   def request_url(path, api_domain) do
     "#{api_domain}/#{path}"
   end
 
+  @spec parse_result(Map.t) :: Map.t
   def parse_result(result) do
     {:ok, {_response, _header, body}} = result
     verify_response(PromisepayEx.JSON.decode!(body))

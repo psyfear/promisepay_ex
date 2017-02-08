@@ -56,6 +56,7 @@ defmodule PromisepayEx.Mixfile do
       {:exvcr, "~> 0.8.7"},
       {:junit_formatter, ">= 0.0.0"},
       {:excoveralls, "~> 0.6.2"},
+      {:credo, "~> 0.5", only: [:dev, :test]},
     ]
   end
 

@@ -5,6 +5,7 @@ defmodule PromisepayEx.Supervisor do
     :supervisor.start_link(__MODULE__, [])
   end
 
+  @spec init([]) :: Map.t
   def init([]) do
     children = [
       # Define workers and child supervisors to be supervised

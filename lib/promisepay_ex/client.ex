@@ -6,12 +6,15 @@ defmodule PromisepayEx.Client do
   @doc """
   Send request with get method.
   """
+  @spec request(:get, String.t, Keyword.t, String.t, String.t) :: Map.t
   def request(:get, url, params, token, _environment) do
     perform_get(url, params, token, nil, [])
   end
 
+  @spec perform_get(String.t, Keyword.t, String.t, String.t, Keyword.t) :: Map.t
   def perform_get(url, params, token, _environment, _options) do
-    URI.encode_query(params)
+    params
+    |> URI.encode_query
     |> build_params(url)
     |> send_request(token)
   end
@@ -22,7 +25,7 @@ defmodule PromisepayEx.Client do
     response = HTTPoison.get(request, headers, options)
     case response do
       {:ok, %HTTPoison.Response{status_code: 200, body: body, headers: headers}} ->
-        {:ok, {200, headers, body} }
+        {:ok, {200, headers, body}}
       {:ok, %HTTPoison.Response{status_code: 404}} ->
         {:error, "Not Found"}
       {:error, %HTTPoison.Error{reason: reason}} ->
