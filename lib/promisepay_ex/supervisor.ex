@@ -1,4 +1,7 @@
 defmodule PromisepayEx.Supervisor do
+  @moduledoc """
+  Supervisor
+  """
   use Supervisor
 
   def start_link do

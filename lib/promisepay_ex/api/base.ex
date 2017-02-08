@@ -3,6 +3,10 @@ defmodule PromisepayEx.API.Base do
   Provides basic and common functionalities for Promisepay API.
   """
 
+  alias PromisepayEx.JSON
+  alias PromisepayEx.Config
+  alias PromisepayEx.Client
+
   @doc """
   Send request to the promisepay server specified by the configuration value api_domain.
   """
@@ -12,11 +16,11 @@ defmodule PromisepayEx.API.Base do
   end
 
   defp perform_request(method, path, params) do
-    config = PromisepayEx.Config.get_tuples |> verify_params
+    config = Config.get_tuples |> verify_params
     url = request_url(path, config[:api_domain])
-    response = PromisepayEx.Client.request(
-      method, 
-      url, 
+    response = Client.request(
+      method,
+      url,
       params,
       config[:token],
       config[:api_domain]
@@ -44,7 +48,7 @@ defmodule PromisepayEx.API.Base do
   @spec parse_result(Map.t) :: Map.t
   def parse_result(result) do
     {:ok, {_response, _header, body}} = result
-    verify_response(PromisepayEx.JSON.decode!(body))
+    verify_response(JSON.decode!(body))
   end
 
   defp verify_response(body) do

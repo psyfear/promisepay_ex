@@ -5,6 +5,7 @@ defmodule PromisepayEx do
 
   use Application
   @doc false
+  @spec start(String.t, Keyword.t) :: :ok
   def start(_type, _args) do
     PromisepayEx.Supervisor.start_link
   end
@@ -80,7 +81,6 @@ defmodule PromisepayEx do
   Retrieve an ordered and paginated list of existing Items.
 
   GET /items
-  
   ## Reference
 
       https://reference.promisepay.com/#list-items
@@ -97,7 +97,6 @@ defmodule PromisepayEx do
   Retrieve an item.
 
   GET /items/:id
-  
   ## Reference
 
       https://reference.promisepay.com/#show-item

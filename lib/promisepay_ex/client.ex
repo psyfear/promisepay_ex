@@ -18,13 +18,19 @@ defmodule PromisepayEx.Client do
     |> build_params(url)
     |> send_request(token)
   end
-  
+
   defp send_request(request, token) do
     headers = ["Authorization": "Basic #{token}", "Accept": "Application/json; Charset=utf-8"]
     options = [ssl: [{:versions, [:'tlsv1.2']}]]
     response = HTTPoison.get(request, headers, options)
     case response do
-      {:ok, %HTTPoison.Response{status_code: 200, body: body, headers: headers}} ->
+      {
+        :ok,
+        %HTTPoison.Response{
+          status_code: 200,
+          body: body,
+          headers: headers}
+        } ->
         {:ok, {200, headers, body}}
       {:ok, %HTTPoison.Response{status_code: 404}} ->
         {:error, "Not Found"}

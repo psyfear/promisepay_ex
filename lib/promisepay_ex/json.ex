@@ -7,6 +7,7 @@ defmodule PromisepayEx.JSON do
   @doc """
   Decode json string into elixir objects.
   """
+  @spec decode!(Keyword.t) :: Map.t
   def decode!(json) do
     Poison.decode!(json, keys: :atoms)
   end
@@ -14,6 +15,7 @@ defmodule PromisepayEx.JSON do
   @doc """
   Decode json string into elixir objects.
   """
+  @spec decode(Keyword.t) :: Map.t
   def decode(json) do
     Poison.decode(json, keys: :atoms)
   end
@@ -22,6 +24,7 @@ defmodule PromisepayEx.JSON do
   Get elixir object for the specified key.
   Some libraries returns as tuples, and some returns HashDict.
   """
+  @spec get(String.t, Atom.t) :: Map.t
   def get(object, key) do
     Map.get(object, key, [])
   end
