@@ -13,8 +13,10 @@ defmodule PromisepayEx.Mixfile do
       package: package(),
 
       # Tests
+      test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [
-        vcr: :test, "vcr.delete": :test, "vcr.check": :test, "vcr.show": :test
+        vcr: :test, "vcr.delete": :test, "vcr.check": :test, "vcr.show": :test,
+        "coveralls": :test, "coveralls.detail": :test, "coveralls.post": :test, "coveralls.html": :test
       ],
 
       # Docs
@@ -53,6 +55,7 @@ defmodule PromisepayEx.Mixfile do
       {:ex_doc, "~> 0.14", only: :dev},
       {:exvcr, "~> 0.8.7"},
       {:junit_formatter, ">= 0.0.0"},
+      {:excoveralls, "~> 0.6.2"},
     ]
   end
 
