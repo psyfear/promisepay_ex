@@ -4,6 +4,8 @@ machine:
   environment:
     PATH: "$HOME/.asdf/bin:$HOME/.asdf/shims:$PATH"
     MIX_ENV: "test"
+    COVERALLS_REPO_TOKEN: lR5F3qpAYgEHsuCPL5PGN03C5bGWYNm6p
+    COVERALLS_PARALLEL: true
 
 dependencies:
   cache_directories:
@@ -24,5 +26,10 @@ dependencies:
 test:
   override:
     - mix test
+    - COVERALLS_REPO_TOKEN=lR5F3qpAYgEHsuCPL5PGN03C5bGWYNm6p mix coveralls.circle
     - mkdir -p $CIRCLE_TEST_REPORTS/exunit
     - cp _build/test/lib/promisepay_ex/test-junit-report.xml $CIRCLE_TEST_REPORTS/exunit
+
+notify:
+  webhooks:
+    - url: https://coveralls.io/webhook?repo_token=lR5F3qpAYgEHsuCPL5PGN03C5bGWYNm6p
