@@ -21,3 +21,11 @@ erl_crash.dump
 
 # Rubymine related
 /.idea
+
+# App artifacts
+/_build/dev
+/_build/test/consolidated/*
+/_build/test/lib/*
+/db
+/deps
+/*.ez

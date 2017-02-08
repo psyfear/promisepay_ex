@@ -52,6 +52,7 @@ defmodule PromisepayEx.Mixfile do
       {:httpoison, "~> 0.11.0"},
       {:ex_doc, "~> 0.14", only: :dev},
       {:exvcr, "~> 0.8.7"},
+      {:junit_formatter, ">= 0.0.0"},
     ]
   end
 

@@ -1,4 +1,4 @@
-# PromisepayEx
+# PromisepayEx [![Build Status](https://circleci.com/gh/psyfear/promisepay_ex.svg?style=shield&circle-token=:circle-token "Build Status")](https://circleci.com/gh/psyfear/promisepay_ex)
 
 Promisepay SDK for elixir.
 
