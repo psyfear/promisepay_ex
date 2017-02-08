@@ -1,4 +1,4 @@
-# PromisepayEx [![Build Status](https://circleci.com/gh/psyfear/promisepay_ex.svg?style=shield&circle-token=:circle-token "Build Status")](https://circleci.com/gh/psyfear/promisepay_ex) [![Coverage Status](https://coveralls.io/repos/github/psyfear/promisepay_ex/badge.svg?branch=master)](https://coveralls.io/github/psyfear/promisepay_ex?branch=master)
+# PromisepayEx [![Build Status](https://circleci.com/gh/psyfear/promisepay_ex.svg?style=shield&circle-token=:circle-token "Build Status")](https://circleci.com/gh/psyfear/promisepay_ex) [![Coverage Status](https://coveralls.io/repos/github/psyfear/promisepay_ex/badge.svg?branch=master)](https://coveralls.io/github/psyfear/promisepay_ex?branch=master) [![Deps Status](https://beta.hexfaktor.org/badge/all/github/parroty/extwitter.svg)](https://beta.hexfaktor.org/github/parroty/extwitter)
 
 Promisepay SDK for elixir.
 
