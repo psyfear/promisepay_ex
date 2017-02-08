@@ -58,7 +58,8 @@ defmodule PromisepayEx.Mixfile do
       {:excoveralls, "~> 0.6.2"},
       {:credo, "~> 0.5", only: [:dev, :test]},
       {:mix_test_watch, "~> 0.3", only: :dev, runtime: false},
-      {:ex_unit_notifier, "~> 0.1", only: :test}
+      {:ex_unit_notifier, "~> 0.1", only: :test},
+      {:inch_ex, only: :docs},
     ]
   end
 
