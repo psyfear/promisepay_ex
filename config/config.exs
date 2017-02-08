@@ -6,3 +6,5 @@ config :promisepay_ex, :auth, [
    environment: System.get_env("PROMISEPAY_ENVIRONMENT"),
    api_domain: System.get_env("PROMISEPAY_API_DOMAIN"),
 ]
+
+import_config "#{Mix.env}.exs"
