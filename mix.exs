@@ -15,8 +15,14 @@ defmodule PromisepayEx.Mixfile do
       # Tests
       test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [
-        vcr: :test, "vcr.delete": :test, "vcr.check": :test, "vcr.show": :test,
-        "coveralls": :test, "coveralls.detail": :test, "coveralls.post": :test, "coveralls.html": :test
+        vcr: :test,
+        "vcr.delete": :test,
+        "vcr.check": :test,
+        "vcr.show": :test,
+        "coveralls": :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test,
       ],
 
       # Docs
@@ -70,8 +76,15 @@ defmodule PromisepayEx.Mixfile do
   end
 
   defp package do
-    [ maintainers: ["Carlos Casal", "Wilfrido Nuqui", "James Dela Cruz", "Jessie Espesor"],
+    [
+      maintainers: [
+        "Carlos Casal",
+        "Wilfrido Nuqui",
+        "James Dela Cruz",
+        "Jessie Espesor",
+      ],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/psyfear/promisepay_ex"} ]
+      links: %{"GitHub" => "https://github.com/psyfear/promisepay_ex"},
+    ]
   end
 end

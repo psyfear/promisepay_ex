@@ -20,7 +20,10 @@ defmodule PromisepayEx.Client do
   end
 
   defp send_request(request, token) do
-    headers = ["Authorization": "Basic #{token}", "Accept": "Application/json; Charset=utf-8"]
+    headers = [
+      "Authorization": "Basic #{token}",
+      "Accept": "Application/json; Charset=utf-8",
+    ]
     options = [ssl: [{:versions, [:'tlsv1.2']}]]
     response = HTTPoison.get(request, headers, options)
     case response do

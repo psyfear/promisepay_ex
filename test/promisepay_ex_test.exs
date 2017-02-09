@@ -3,14 +3,16 @@ defmodule PromisepayExTest do
   use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
   doctest PromisepayEx
 
+  alias ExVCR.Config
+
   setup_all do
-    ExVCR.Config.cassette_library_dir(
-      "fixture/vcr_cassettes", 
+    Config.cassette_library_dir(
+      "fixture/vcr_cassettes",
       "fixture/custom_cassettes"
     )
 
-    ExVCR.Config.filter_url_params(true)
-    ExVCR.Config.filter_request_headers("Authorization")
+    Config.filter_url_params(true)
+    Config.filter_request_headers("Authorization")
 
     PromisepayEx.configure(
       username: "test@promisepay.com",
@@ -20,6 +22,30 @@ defmodule PromisepayExTest do
     )
 
     :ok
+  end
+
+  setup do
+    PromisepayEx.configure(
+      username: "test@promisepay.com",
+      token: "TOKEN",
+      environment: "test",
+      api_domain: "api.localhost.local:3000",
+    )
+
+    :ok
+  end
+
+  test "no configuration" do
+    PromisepayEx.configure(
+      username: nil,
+      token: nil,
+      environment: nil,
+      api_domain: nil
+    )
+
+    assert_raise PromisepayEx.Error, fn ->
+      PromisepayEx.items
+    end
   end
 
   test "gets current configuration" do
