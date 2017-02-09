@@ -22,6 +22,25 @@ defmodule PromisepayExTest do
     :ok
   end
 
+  setup do
+    PromisepayEx.configure(
+      username: "test@promisepay.com",
+      token: "TOKEN",
+      environment: "test",
+      api_domain: "api.localhost.local:3000",
+    )
+
+    :ok
+  end
+
+  test "no configuration" do
+    PromisepayEx.configure(username: nil, token: nil, environment: nil, api_domain: nil)
+
+    assert_raise PromisepayEx.Error, fn ->
+      PromisepayEx.items
+    end
+  end
+
   test "gets current configuration" do
     config = PromisepayEx.configure
     assert Keyword.has_key?(config, :username)

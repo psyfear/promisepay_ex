@@ -10,7 +10,6 @@ defmodule PromisepayEx.API.Base do
   @doc """
   Send request to the promisepay server specified by the configuration value api_domain.
   """
-  @spec request(:get, String.t, Keyword.t) :: Map.t
   def request(method, path, params \\ []) do
     perform_request(method, path, params)
   end
