@@ -1,3 +1,9 @@
-ExUnit.configure formatters: [JUnitFormatter, ExUnit.CLIFormatter, ExUnitNotifier]
+ExUnit.configure(
+  formatters: [
+    JUnitFormatter,
+    ExUnit.CLIFormatter,
+    ExUnitNotifier,
+  ]
+)
 
 ExUnit.start()

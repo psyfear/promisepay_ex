@@ -1,24 +1,33 @@
 defmodule PromisepayEx.ConfigTest do
   use ExUnit.Case
+  alias PromisepayEx.Config
 
   test "auth initialization global" do
     auth =
-      [ username: "username",
+      [
+        username: "username",
         token: "token",
         environment: "environment",
-        api_domain: "api_domain" ]
-    PromisepayEx.Config.set(auth)
+        api_domain: "api_domain",
+      ]
+    Config.set(auth)
 
-    assert PromisepayEx.Config.current_scope == :global
-    assert PromisepayEx.Config.get == auth
+    assert Config.current_scope == :global
+    assert Config.get == auth
   end
 
   test "auth initialization (process)" do
     test = self()
     test_fun = fn(test_pid, config) ->
       spawn(fn() ->
-        PromisepayEx.Config.set(:process, config)
-        send(test_pid, {PromisepayEx.Config.current_scope, PromisepayEx.Config.get})
+        Config.set(:process, config)
+        send(
+          test_pid,
+          {
+            Config.current_scope,
+            Config.get,
+          }
+        )
         exit(:normal)
       end)
     end
@@ -30,12 +39,12 @@ defmodule PromisepayEx.ConfigTest do
   end
 
   test "get_tuples returns list of tuples" do
-    PromisepayEx.Config.set([conf: "value"])
-    assert PromisepayEx.Config.get_tuples == [{:conf, "value"}]
+    Config.set([conf: "value"])
+    assert Config.get_tuples == [{:conf, "value"}]
   end
 
   test "get_tuples returns empty list when config is not set" do
-    PromisepayEx.Config.set(nil)
-    assert PromisepayEx.Config.get_tuples == []
+    Config.set(nil)
+    assert Config.get_tuples == []
   end
 end
