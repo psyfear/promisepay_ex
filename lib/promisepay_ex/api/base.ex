@@ -22,8 +22,8 @@ defmodule PromisepayEx.API.Base do
       method,
       url,
       params,
-      config[:token],
-      config[:api_domain]
+      config[:username],
+      config[:password]
     )
     case response do
       {:error, reason} -> raise PromisepayEx.Error, message: reason

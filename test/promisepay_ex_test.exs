@@ -12,11 +12,12 @@ defmodule PromisepayExTest do
     )
 
     Config.filter_url_params(true)
-    Config.filter_request_headers("Authorization")
+    Config.filter_request_headers("basic_auth")
+    #Config.filter_sensitive_data("<PASSWORD>.+</PASSWORD>", "PLACEHOLDER")
 
     PromisepayEx.configure(
       username: "test@promisepay.com",
-      token: "TOKEN",
+      password: "test",
       environment: "test",
       api_domain: "api.localhost.local:3000",
     )
@@ -27,7 +28,7 @@ defmodule PromisepayExTest do
   setup do
     PromisepayEx.configure(
       username: "test@promisepay.com",
-      token: "TOKEN",
+      password: "test",
       environment: "test",
       api_domain: "api.localhost.local:3000",
     )
@@ -38,7 +39,7 @@ defmodule PromisepayExTest do
   test "no configuration" do
     PromisepayEx.configure(
       username: nil,
-      token: nil,
+      password: nil,
       environment: nil,
       api_domain: nil
     )
@@ -51,7 +52,7 @@ defmodule PromisepayExTest do
   test "gets current configuration" do
     config = PromisepayEx.configure
     assert Keyword.has_key?(config, :username)
-    assert Keyword.has_key?(config, :token)
+    assert Keyword.has_key?(config, :password)
     assert Keyword.has_key?(config, :environment)
     assert Keyword.has_key?(config, :api_domain)
   end
@@ -60,15 +61,15 @@ defmodule PromisepayExTest do
     use_cassette "items_request" do
       items = PromisepayEx.items
       assert length(items) == 10
-      assert hd(items).name == "Charge 83bfa2cb-78a4-445f-92b2-eea446bfa561"
+      assert hd(items).name == "toyota hilux35"
     end
   end
 
   test "authenticated item request" do
     use_cassette "item_request" do
-      item = PromisepayEx.item("chocoitem1")
-      assert item.name == "Sample item for CC payment"
-      assert item.id == "chocoitem1"
+      item = PromisepayEx.item("6bf802c5e641aeaf28ac4397eb5f42a5")
+      assert item.name == "Awesome Websites Domain"
+      assert item.id == "6bf802c5e641aeaf28ac4397eb5f42a5"
     end
   end
 end

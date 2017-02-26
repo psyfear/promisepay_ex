@@ -6,7 +6,7 @@ defmodule PromisepayEx.ConfigTest do
     auth =
       [
         username: "username",
-        token: "token",
+        password: "password",
         environment: "environment",
         api_domain: "api_domain",
       ]

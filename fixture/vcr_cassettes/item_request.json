@@ -2,23 +2,19 @@
   {
     "request": {
       "body": "",
-      "headers": {
-        "Authorization": "***",
-        "Accept": "Application/json; Charset=utf-8"
-      },
+      "headers": [],
       "method": "get",
       "options": {
-        "ssl_options": {
-          "versions": [
-            "tlsv1.2"
-          ]
-        }
+        "basic_auth": [
+          "***",
+          "***"
+        ]
       },
       "request_body": "",
-      "url": "http://api.localhost.local:3000//items/chocoitem1?"
+      "url": "http://api.localhost.local:3000//items/6bf802c5e641aeaf28ac4397eb5f42a5?"
     },
     "response": {
-      "body": "{\"items\":{\"id\":\"chocoitem1\",\"name\":\"Sample item for CC payment\",\"description\":null,\"custom_descriptor\":null,\"created_at\":\"2016-12-15T05:44:32.589Z\",\"updated_at\":\"2016-12-15T05:46:23.742Z\",\"state\":\"completed\",\"net_amount\":101,\"chargedback_amount\":0,\"refunded_amount\":0,\"released_amount\":98,\"seller_url\":\"\",\"buyer_url\":\"\",\"remaining_amount\":0,\"status\":22500,\"amount\":101,\"payment_type_id\":2,\"due_date\":null,\"requested_release_amount\":0,\"pending_release_amount\":0,\"dynamic_descriptor\":\"100014012004933\",\"deposit_reference\":\"100014012004933\",\"buyer_fees\":10,\"seller_fees\":3,\"credit_card_fee\":0,\"direct_debit_fee\":0,\"paypal_fee\":0,\"promisepay_fee\":3,\"total_outstanding\":0,\"total_amount\":111,\"currency\":\"AUD\",\"payment_method\":\"credit card\",\"buyer_name\":\"Choco\",\"buyer_email\":\"chocobuyer@gmail.com\",\"buyer_country\":\"AUS\",\"seller_name\":\"Choco\",\"seller_email\":\"chocobuyer1@gmail.com\",\"seller_country\":\"AUS\",\"payment_credit_card_enabled\":true,\"payment_direct_debit_enabled\":false,\"related\":{\"buyers\":\"chocobuyer1\",\"sellers\":\"chocoseller1\"},\"links\":{\"self\":\"/items/chocoitem1\",\"buyers\":\"/items/chocoitem1/buyers\",\"sellers\":\"/items/chocoitem1/sellers\",\"status\":\"/items/chocoitem1/status\",\"fees\":\"/items/chocoitem1/fees\",\"transactions\":\"/items/chocoitem1/transactions\",\"batch_transactions\":\"/items/chocoitem1/batch_transactions\",\"wire_details\":\"/items/chocoitem1/wire_details\",\"bpay_details\":\"/items/chocoitem1/bpay_details\",\"tds_checks\":\"/items/chocoitem1/tds_checks\"}}}",
+      "body": "{\"items\":{\"id\":\"6bf802c5e641aeaf28ac4397eb5f42a5\",\"name\":\"Awesome Websites Domain\",\"description\":null,\"custom_descriptor\":null,\"created_at\":\"2017-02-21T03:01:16.823Z\",\"updated_at\":\"2017-02-21T03:01:16.823Z\",\"state\":\"pending\",\"net_amount\":850000,\"chargedback_amount\":0,\"refunded_amount\":0,\"released_amount\":0,\"seller_url\":null,\"buyer_url\":null,\"remaining_amount\":850000,\"status\":22000,\"amount\":850000,\"payment_type_id\":1,\"due_date\":null,\"requested_release_amount\":0,\"pending_release_amount\":0,\"dynamic_descriptor\":null,\"deposit_reference\":\"100014012003753\",\"buyer_fees\":85000,\"seller_fees\":25500,\"credit_card_fee\":18700,\"direct_debit_fee\":0,\"paypal_fee\":0,\"promisepay_fee\":14025,\"total_outstanding\":935000,\"total_amount\":935000,\"currency\":\"AUD\",\"payment_method\":\"pending\",\"buyer_name\":\"Anita Medina\",\"buyer_email\":\"anita.test@promisepay.com\",\"buyer_country\":\"AUS\",\"seller_name\":\"Axle Tyran\",\"seller_email\":\"axle.test@promisepay.com\",\"seller_country\":\"AUS\",\"payment_credit_card_enabled\":true,\"payment_direct_debit_enabled\":false,\"related\":{\"buyers\":\"14cfbac7ffa947b8854d9bd777d27305\",\"sellers\":\"3c67896d69b27eb7e3bc9a3cd499dc27\"},\"links\":{\"self\":\"/items/6bf802c5e641aeaf28ac4397eb5f42a5\",\"buyers\":\"/items/6bf802c5e641aeaf28ac4397eb5f42a5/buyers\",\"sellers\":\"/items/6bf802c5e641aeaf28ac4397eb5f42a5/sellers\",\"status\":\"/items/6bf802c5e641aeaf28ac4397eb5f42a5/status\",\"fees\":\"/items/6bf802c5e641aeaf28ac4397eb5f42a5/fees\",\"transactions\":\"/items/6bf802c5e641aeaf28ac4397eb5f42a5/transactions\",\"batch_transactions\":\"/items/6bf802c5e641aeaf28ac4397eb5f42a5/batch_transactions\",\"wire_details\":\"/items/6bf802c5e641aeaf28ac4397eb5f42a5/wire_details\",\"bpay_details\":\"/items/6bf802c5e641aeaf28ac4397eb5f42a5/bpay_details\",\"tds_checks\":\"/items/6bf802c5e641aeaf28ac4397eb5f42a5/tds_checks\"}}}",
       "headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
@@ -29,10 +25,10 @@
         "Access-Control-Max-Age": "1728000",
         "Access-Control-Request-Method": "*",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "W/\"aea559c821aed09589d2d63d36c5ee4a\"",
+        "ETag": "W/\"a6d4a7f0cec4c3c9cff66bd23d4cac0e\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "7fdc15c4-1b0c-4449-9ee4-46d478db01ba",
-        "X-Runtime": "0.566364",
+        "X-Request-Id": "f8c96d39-0323-45eb-8941-df786dc6f2d1",
+        "X-Runtime": "0.597237",
         "Connection": "close",
         "Server": "thin"
       },

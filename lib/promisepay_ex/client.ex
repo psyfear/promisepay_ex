@@ -7,25 +7,41 @@ defmodule PromisepayEx.Client do
   Send request with get method.
   """
   @spec request(:get, String.t, Keyword.t, String.t, String.t) :: Map.t
-  def request(:get, url, params, token, _environment) do
-    perform_get(url, params, token, nil, [])
+  def request(:get, url, params, username, password) do
+    perform_get(url, params, username, password)
   end
 
-  @spec perform_get(String.t, Keyword.t, String.t, String.t, Keyword.t) :: Map.t
-  def perform_get(url, params, token, _environment, _options) do
+  def perform_get(_url, _params, nil, nil) do
+    raise(PromisepayEx.Error, message: "Error")
+  end
+
+  @spec perform_get(String.t, Keyword.t, String.t, String.t) :: Map.t
+  def perform_get(url, params, username, password) do
     params
     |> URI.encode_query
     |> build_params(url)
-    |> send_request(token)
+    |> send_request(username, password)
   end
 
-  defp send_request(request, token) do
-    headers = [
-      "Authorization": "Basic #{token}",
-      "Accept": "Application/json; Charset=utf-8",
+  defp build_basic_auth(nil, nil) do
+    []
+  end
+
+  defp build_basic_auth(username, password) do
+    [
+      hackney: [
+        basic_auth: {
+          username,
+          password,
+        }
+      ]
     ]
-    options = [ssl: [{:versions, [:'tlsv1.2']}]]
-    response = HTTPoison.get(request, headers, options)
+  end
+
+  defp send_request(request, username, password) do
+    options = build_basic_auth(username, password)
+    response = HTTPoison.get(request, [], options)
+
     case response do
       {
         :ok,
