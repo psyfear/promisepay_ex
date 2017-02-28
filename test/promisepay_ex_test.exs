@@ -13,8 +13,7 @@ defmodule PromisepayExTest do
 
     Config.filter_url_params(true)
     Config.filter_request_headers("basic_auth")
-    #Config.filter_sensitive_data("<PASSWORD>.+</PASSWORD>", "PLACEHOLDER")
-
+    
     PromisepayEx.configure(
       username: "test@promisepay.com",
       password: "test",

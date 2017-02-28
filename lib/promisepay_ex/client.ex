@@ -23,9 +23,7 @@ defmodule PromisepayEx.Client do
     |> send_request(username, password)
   end
 
-  defp build_basic_auth(nil, nil) do
-    []
-  end
+  defp build_basic_auth(nil, nil), do: []
 
   defp build_basic_auth(username, password) do
     [
