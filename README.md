@@ -18,7 +18,7 @@ In `config/config.exs`, add:
 ```elixir
 config :promisepay_ex, :auth, [
    username: "",
-   token: "",
+   password: "",
    environment: "",
    api_domain: ""
 ]
@@ -56,7 +56,7 @@ Interactive Elixir - press Ctrl+C to exit (type h() ENTER for help)
 ```Elixir
 PromisepayEx.configure(
    username: System.get_env("PROMISEPAY_USERNAME"),
-   token: System.get_env("PROMISEPAY_TOKEN"),
+   password: System.get_env("PROMISEPAY_PASSWORD"),
    environment: System.get_env("PROMISEPAY_ENVIRONMENT"),
    api_domain: System.get_env("PROMISEPAY_API_DOMAIN"),
 )
