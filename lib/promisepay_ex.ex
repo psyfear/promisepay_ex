@@ -107,4 +107,20 @@ defmodule PromisepayEx do
 
   """
   defdelegate item(id), to: PromisepayEx.API.Items
+
+  @doc """
+  Generates token.
+
+  POST /token_auths
+  ## Reference
+
+      https://reference.assemblypayments.com/#token-auth
+
+  ## Examples
+
+      options = %{token_type: "card", user_id: "user_id"}
+      PromisepayEx.generate_token(options)
+
+  """
+  defdelegate generate_token(params), to: PromisepayEx.API.Token
 end
