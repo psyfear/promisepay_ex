@@ -1,4 +1,6 @@
 defmodule PromisepayExTest do
+  @moduledoc false
+
   use ExUnit.Case
   use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
   doctest PromisepayEx
@@ -69,6 +71,20 @@ defmodule PromisepayExTest do
       item = PromisepayEx.item("6bf802c5e641aeaf28ac4397eb5f42a5")
       assert item.name == "Awesome Websites Domain"
       assert item.id == "6bf802c5e641aeaf28ac4397eb5f42a5"
+    end
+  end
+
+  test "authenticated token_auths request" do
+    Config.filter_request_headers("Authorization")
+
+    use_cassette "token_auths_request" do
+      options = %{
+        token_type: "card",
+        user_id: "064d6800-fff3-11e5-86aa-5e5517507c66"
+      }
+      token = PromisepayEx.generate_token(options)
+      assert token.token == "45393cd06fedd253405eccaa4bd8f10d"
+      assert token.user_id == "457dd2d8a401fa19693b0c04f0128eb0"
     end
   end
 end

@@ -1,0 +1,36 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Authorization": "***"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "http://api.localhost.local:3000/token_auths"
+    },
+    "response": {
+      "body": "{\"token_auth\":{\"token_type\":\"card\",\"token\":\"45393cd06fedd253405eccaa4bd8f10d\",\"user_id\":\"457dd2d8a401fa19693b0c04f0128eb0\"}}",
+      "headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, Content-Type, Accept, Authorization, Token",
+        "Access-Control-Allow-Methods": "POST, GET, PUT, DELETE, OPTIONS",
+        "Access-Control-Max-Age": "1728000",
+        "Access-Control-Request-Method": "*",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"87842bd470a86f4f2f826e758174850f\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "8c4d316d-9628-468a-b83e-a639831c9b41",
+        "X-Runtime": "0.186656",
+        "Connection": "close",
+        "Server": "thin"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
