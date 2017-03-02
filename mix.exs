@@ -66,6 +66,7 @@ defmodule PromisepayEx.Mixfile do
       {:mix_test_watch, "~> 0.3", only: :dev, runtime: false},
       {:ex_unit_notifier, "~> 0.1", only: :test},
       {:inch_ex, only: :docs},
+      {:dialyxir, "~> 0.5", only: [:dev], runtime: false},
     ]
   end
 
