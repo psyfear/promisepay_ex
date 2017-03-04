@@ -1,9 +1,6 @@
-defmodule PromisepayExTest do
-  @moduledoc false
-
+defmodule ConfigureTest do
   use ExUnit.Case
   use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
-  doctest PromisepayEx
 
   alias ExVCR.Config
 
@@ -15,13 +12,6 @@ defmodule PromisepayExTest do
 
     Config.filter_url_params(true)
     Config.filter_request_headers("basic_auth")
-
-    PromisepayEx.configure(
-      username: "test@promisepay.com",
-      password: "test",
-      environment: "test",
-      api_domain: "api.localhost.local:3000",
-    )
 
     :ok
   end
@@ -37,7 +27,7 @@ defmodule PromisepayExTest do
     :ok
   end
 
-  test "no configuration" do
+  test "configure using nils" do
     PromisepayEx.configure(
       username: nil,
       password: nil,
@@ -46,45 +36,24 @@ defmodule PromisepayExTest do
     )
 
     assert_raise PromisepayEx.Error, fn ->
-      PromisepayEx.items
+      PromisepayEx.items()
     end
   end
 
   test "gets current configuration" do
     config = PromisepayEx.configure
+
     assert Keyword.has_key?(config, :username)
     assert Keyword.has_key?(config, :password)
     assert Keyword.has_key?(config, :environment)
     assert Keyword.has_key?(config, :api_domain)
   end
 
-  test "authenticated items request" do
+  test "authenticated api request" do
     use_cassette "items_request" do
-      items = PromisepayEx.items
+      items = PromisepayEx.items()
       assert length(items) == 10
       assert hd(items).name == "toyota hilux35"
-    end
-  end
-
-  test "authenticated item request" do
-    use_cassette "item_request" do
-      item = PromisepayEx.item("6bf802c5e641aeaf28ac4397eb5f42a5")
-      assert item.name == "Awesome Websites Domain"
-      assert item.id == "6bf802c5e641aeaf28ac4397eb5f42a5"
-    end
-  end
-
-  test "authenticated token_auths request" do
-    Config.filter_request_headers("Authorization")
-
-    use_cassette "token_auths_request" do
-      options = %{
-        token_type: "card",
-        user_id: "064d6800-fff3-11e5-86aa-5e5517507c66"
-      }
-      token = PromisepayEx.generate_token(options)
-      assert token.token == "45393cd06fedd253405eccaa4bd8f10d"
-      assert token.user_id == "457dd2d8a401fa19693b0c04f0128eb0"
     end
   end
 end
