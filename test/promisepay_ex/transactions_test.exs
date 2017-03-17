@@ -18,8 +18,8 @@ defmodule TransactionsTest do
 
   setup do
     PromisepayEx.configure(
-      username: "gary.test@promisepay.com",
-      password: "promisepay",
+      username: "test@promisepay.com",
+      password: "test",
       environment: "test",
       api_domain: "api.localhost.local:3000",
     )

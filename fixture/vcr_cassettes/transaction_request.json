@@ -6,8 +6,8 @@
       "method": "get",
       "options": {
         "basic_auth": [
-          "gary.test@promisepay.com",
-          "promisepay"
+          "test@promisepay.com",
+          "test"
         ]
       },
       "request_body": "",
