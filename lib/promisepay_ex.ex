@@ -140,4 +140,52 @@ defmodule PromisepayEx do
 
   """
   defdelegate generate_token(params), to: PromisepayEx.API.Token
+
+  # -------------- Transactions -------------
+
+  @doc """
+  Retrieve an ordered and paginated list of existing transactions.
+
+  GET /transactions
+  ## Reference
+
+      https://reference.assemblypayments.com/#list-transactions
+
+  ## Examples
+
+      PromisepayEx.transactions([limit: 10, offset: 1])
+
+  """
+  defdelegate transactions, to: PromisepayEx.API.Transactions
+  defdelegate transactions(params), to: PromisepayEx.API.Transactions
+
+  @doc """
+  Retrieve a transaction.
+
+  GET /transactions/:id
+  ## Reference
+
+      https://reference.assemblypayments.com/#show-transaction
+
+  ## Examples
+
+      PromisepayEx.transaction('transaction_id')
+
+  """
+  defdelegate transaction(id), to: PromisepayEx.API.Transactions
+
+  @doc """
+  Show the associated object with the Transaction using a given :id.
+
+  GET /transactions/:id/:object
+  ## Reference
+
+      https://reference.assemblypayments.com/#show-transaction
+
+  ## Examples
+
+      PromisepayEx.transaction('transaction_id', :user)
+
+  """
+  defdelegate transaction(id, type), to: PromisepayEx.API.Transactions
 end

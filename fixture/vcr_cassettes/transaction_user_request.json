@@ -1,0 +1,40 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": {
+        "basic_auth": [
+          "test@promisepay.com",
+          "test"
+        ]
+      },
+      "request_body": "",
+      "url": "http://api.localhost.local:3000//transactions/f56f85d1-c163-4afc-ab0c-630817c77418/users?"
+    },
+    "response": {
+      "body": "{\"users\":{\"created_at\":\"2017-02-21T03:10:50.404Z\",\"updated_at\":\"2017-02-21T03:10:56.625Z\",\"full_name\":\"Bobby Buyer\",\"email\":\"test.buyer@promisepay.com\",\"mobile\":\"+61437460896\",\"phone\":null,\"logo_url\":null,\"color_1\":null,\"color_2\":null,\"first_name\":\"Bobby\",\"last_name\":\"Buyer\",\"id\":\"2\",\"custom_descriptor\":null,\"location\":\"AUS\",\"verification_state\":\"pending\",\"held_state\":false,\"roles\":[\"customer\"],\"dob\":null,\"government_number\":null,\"drivers_license\":null,\"flags\":{},\"related\":{\"addresses\":\"b6ec9a6d-c40b-4f85-9439-0a65581dec51\"},\"links\":{\"self\":\"/transactions/f56f85d1-c163-4afc-ab0c-630817c77418/users\",\"items\":\"/users/2/items\",\"card_accounts\":\"/users/2/card_accounts\",\"paypal_accounts\":\"/users/2/paypal_accounts\",\"bank_accounts\":\"/users/2/bank_accounts\",\"wallet_accounts\":\"/users/2/wallet_accounts\"}}}",
+      "headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, Content-Type, Accept, Authorization, Token",
+        "Location": "/transactions/f56f85d1-c163-4afc-ab0c-630817c77418/users",
+        "Access-Control-Allow-Methods": "POST, GET, PUT, DELETE, OPTIONS",
+        "Access-Control-Max-Age": "1728000",
+        "Access-Control-Request-Method": "*",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"e8b47a830c1bc191ea8ecd7c128662ac\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "cd7889dc-5702-4c6c-b8fb-676c153773df",
+        "X-Runtime": "0.290067",
+        "Connection": "close",
+        "Server": "thin"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

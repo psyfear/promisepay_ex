@@ -1,0 +1,40 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": {
+        "basic_auth": [
+          "test@promisepay.com",
+          "test"
+        ]
+      },
+      "request_body": "",
+      "url": "http://api.localhost.local:3000//transactions/f56f85d1-c163-4afc-ab0c-630817c77418?"
+    },
+    "response": {
+      "body": "{\"transactions\":{\"id\":\"f56f85d1-c163-4afc-ab0c-630817c77418\",\"created_at\":\"2017-03-08T05:07:11.168Z\",\"updated_at\":\"2017-03-08T05:07:11.168Z\",\"description\":\"Credit of $24.25 to Wallet Account by Debit of $24.25 from Item\",\"type\":\"withdrawal\",\"type_method\":\"misc\",\"state\":\"successful\",\"user_id\":\"2\",\"account_id\":\"1696e67c-c717-44bc-8e13-12ace7bda1c8\",\"account_type\":\"wallet_account\",\"amount\":2425,\"currency\":\"AUD\",\"debit_credit\":\"credit\",\"related\":{\"transactions\":[{\"id\":\"e7ae1f57-46f8-4faf-b933-18b60e495da0\",\"account_id\":\"6\",\"account_type\":\"item\",\"user_id\":\"2\"}]},\"links\":{\"self\":\"/transactions/f56f85d1-c163-4afc-ab0c-630817c77418\",\"users\":\"/transactions/f56f85d1-c163-4afc-ab0c-630817c77418/users\",\"fees\":\"/transactions/f56f85d1-c163-4afc-ab0c-630817c77418/fees\",\"wallet_accounts\":\"/transactions/f56f85d1-c163-4afc-ab0c-630817c77418/wallet_accounts\",\"card_accounts\":\"/transactions/f56f85d1-c163-4afc-ab0c-630817c77418/card_accounts\",\"paypal_accounts\":\"/transactions/f56f85d1-c163-4afc-ab0c-630817c77418/paypal_accounts\",\"bank_accounts\":\"/transactions/f56f85d1-c163-4afc-ab0c-630817c77418/bank_accounts\",\"items\":\"/transactions/f56f85d1-c163-4afc-ab0c-630817c77418/items\"}}}",
+      "headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, Content-Type, Accept, Authorization, Token",
+        "Location": "/transactions/f56f85d1-c163-4afc-ab0c-630817c77418",
+        "Access-Control-Allow-Methods": "POST, GET, PUT, DELETE, OPTIONS",
+        "Access-Control-Max-Age": "1728000",
+        "Access-Control-Request-Method": "*",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"34d2ef8e0830c4c39a86e29dca5348f8\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "c16d2127-b62a-4f44-8c64-7af5d7c8a754",
+        "X-Runtime": "0.147780",
+        "Connection": "close",
+        "Server": "thin"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
