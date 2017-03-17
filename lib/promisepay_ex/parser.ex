@@ -12,14 +12,6 @@ defmodule PromisepayEx.Parser do
   end
 
   @doc """
-  Parse batch transaction record from the API response json.
-  """
-  @spec parse_batch_transaction(Map.t) :: Map.t
-  def parse_batch_transaction(object) do
-    struct(PromisepayEx.Model.BatchTransaction, object)
-  end
-
-  @doc """
   Parse item record from the API response json.
   """
   @spec parse_item(Map.t) :: Map.t
