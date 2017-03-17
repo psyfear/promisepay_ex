@@ -12,6 +12,14 @@ defmodule PromisepayEx.Parser do
   end
 
   @doc """
+  Parse batch transaction record from the API response json.
+  """
+  @spec parse_batch_transaction(Map.t) :: Map.t
+  def parse_batch_transaction(object) do
+    struct(PromisepayEx.Model.BatchTransaction, object)
+  end
+
+  @doc """
   Parse item record from the API response json.
   """
   @spec parse_item(Map.t) :: Map.t
@@ -33,5 +41,13 @@ defmodule PromisepayEx.Parser do
   @spec parse_token(Map.t) :: Map.t
   def parse_token(object) do
     struct(PromisepayEx.Model.Token, object)
+  end
+
+  @doc """
+  Parse transaction record from the API response json.
+  """
+  @spec parse_transaction(Map.t) :: Map.t
+  def parse_transaction(object) do
+    struct(PromisepayEx.Model.Transaction, object)
   end
 end
