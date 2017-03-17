@@ -173,4 +173,19 @@ defmodule PromisepayEx do
 
   """
   defdelegate transaction(id), to: PromisepayEx.API.Transactions
+
+  @doc """
+  Show the associated object with the Transaction using a given :id.
+
+  GET /transactions/:id/:object
+  ## Reference
+
+      https://reference.assemblypayments.com/#show-transaction
+
+  ## Examples
+
+      PromisepayEx.transaction('transaction_id', :user)
+
+  """
+  defdelegate transaction(id, type), to: PromisepayEx.API.Transactions
 end

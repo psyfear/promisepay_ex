@@ -17,6 +17,18 @@ defmodule PromisepayEx.API.Transactions do
     Enum.map(transaction_list, &Parser.parse_transaction/1)
   end
 
+  @spec transaction(String.t, :user) :: PromisepayEx.Model.User.t
+  def transaction(id, :user) do
+    %{users: user} = request(:get, "/transactions/#{id}/users", [])
+    Parser.parse_user(user)
+  end
+
+  @spec transaction(String.t, Atom.t) :: PromisepayEx.Model.WalletAccount.t
+  def transaction(id, :wallet_account) do
+    %{wallet_accounts: wallet_account} = request(:get, "/transactions/#{id}/wallet_accounts", [])
+    Parser.parse_wallet_account(wallet_account)
+  end
+
   @spec transaction(String.t) :: PromisepayEx.Model.Transaction.t
   def transaction(id) do
     %{transactions: transaction} = request(:get, "/transactions/#{id}", [])
