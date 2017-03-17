@@ -4,6 +4,14 @@ defmodule PromisepayEx.Parser do
   """
 
   @doc """
+  Parse address record from the API response json.
+  """
+  @spec parse_address(Map.t) :: Map.t
+  def parse_address(object) do
+    struct(PromisepayEx.Model.Address, object)
+  end
+
+  @doc """
   Parse item record from the API response json.
   """
   @spec parse_item(Map.t) :: Map.t

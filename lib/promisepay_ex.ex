@@ -75,6 +75,23 @@ defmodule PromisepayEx do
   @spec request(:get | :post, String.t, Keyword.t) :: Map
   defdelegate request(method, path, params), to: PromisepayEx.API.Base
 
+  # -------------- Addresses -------------
+
+  @doc """
+  Show details of a specific Address using a given :id.
+
+  GET /addresses/:id
+  ## Reference
+
+      https://reference.assemblypayments.com/#addresses
+
+  ## Examples
+
+      PromisepayEx.address('address_id')
+
+  """
+  defdelegate address(id), to: PromisepayEx.API.Addresses
+
   # -------------- Items -------------
 
   @doc """

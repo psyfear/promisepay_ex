@@ -1,0 +1,39 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": {
+        "basic_auth": [
+          "test@promisepay.com",
+          "test"
+        ]
+      },
+      "request_body": "",
+      "url": "http://api.localhost.local:3000//addresses/1fa89e62-0abe-432c-81f0-10e9f7f15f74?"
+    },
+    "response": {
+      "body": "{\"addresses\":{\"addressline1\":\"6880 Purdy Forges\",\"addressline2\":null,\"postcode\":\"12236\",\"city\":\"Norvalmouth\",\"state\":\"MN\",\"id\":\"1fa89e62-0abe-432c-81f0-10e9f7f15f74\",\"country\":\"United States of America\",\"links\":{\"self\":\"/addresses/1fa89e62-0abe-432c-81f0-10e9f7f15f74\"}}}",
+      "headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, Content-Type, Accept, Authorization, Token",
+        "Access-Control-Allow-Methods": "POST, GET, PUT, DELETE, OPTIONS",
+        "Access-Control-Max-Age": "1728000",
+        "Access-Control-Request-Method": "*",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"e750b5293f9da6b0e9c336d28c7478bb\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "17deca24-906f-4c31-8216-4547b9f4b9fe",
+        "X-Runtime": "0.223163",
+        "Connection": "close",
+        "Server": "thin"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
