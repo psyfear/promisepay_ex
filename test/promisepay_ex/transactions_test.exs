@@ -18,8 +18,8 @@ defmodule TransactionsTest do
 
   setup do
     PromisepayEx.configure(
-      username: "gary.test@promisepay.com",
-      password: "promisepay",
+      username: "test@promisepay.com",
+      password: "test",
       environment: "test",
       api_domain: "api.localhost.local:3000",
     )
@@ -53,7 +53,7 @@ defmodule TransactionsTest do
     use_cassette "transaction_user_request" do
       user = PromisepayEx.transaction(
         "f56f85d1-c163-4afc-ab0c-630817c77418", 
-        :user,
+        :user
       )
 
       assert user.id == "2"
@@ -67,7 +67,7 @@ defmodule TransactionsTest do
     use_cassette "transaction_wallet_account_request" do
       wallet = PromisepayEx.transaction(
         "f56f85d1-c163-4afc-ab0c-630817c77418", 
-        :wallet_account,
+        :wallet_account
       )
 
       assert wallet.id == "1696e67c-c717-44bc-8e13-12ace7bda1c8"
