@@ -25,7 +25,11 @@ defmodule PromisepayEx.API.Transactions do
 
   @spec transaction(String.t, Atom.t) :: PromisepayEx.Model.WalletAccount.t
   def transaction(id, :wallet_account) do
-    %{wallet_accounts: wallet_account} = request(:get, "/transactions/#{id}/wallet_accounts", [])
+    %{wallet_accounts: wallet_account} = request(
+      :get,
+      "/transactions/#{id}/wallet_accounts",
+      []
+    )
     Parser.parse_wallet_account(wallet_account)
   end
 
