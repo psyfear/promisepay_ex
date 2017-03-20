@@ -188,4 +188,37 @@ defmodule PromisepayEx do
 
   """
   defdelegate transaction(id, type), to: PromisepayEx.API.Transactions
+
+  # -------------- Companies -------------
+
+  @doc """
+  Retrieve an ordered and paginated list of existing Companies.
+
+  GET /companies
+  ## Reference
+
+      https://reference.assemblypayments.com/#list-companies
+
+  ## Examples
+
+      PromisepayEx.companies([limit: 10, offset: 1])
+
+  """
+  defdelegate companies, to: PromisepayEx.API.Companies
+  defdelegate companies(params), to: PromisepayEx.API.Companies
+
+  @doc """
+  Retrieve a company.
+
+  GET /companies/:id
+  ## Reference
+
+      https://reference.assemblypayments.com/#show-company
+
+  ## Examples
+
+      PromisepayEx.company('company_id')
+
+  """
+  defdelegate company(id), to: PromisepayEx.API.Companies
 end
