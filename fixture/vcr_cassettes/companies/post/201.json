@@ -1,0 +1,37 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Authorization": "***"
+      },
+      "method": "post",
+      "options": [],
+      "request_body": "",
+      "url": "http://api.localhost.local:3000/companies"
+    },
+    "response": {
+      "body": "{\"companies\":{\"legal_name\":\"Samuel's Gardening Pty Ltd\",\"name\":\"Samuel's Gardening\",\"tax_number\":\"PWh/fotLn8MVLS4ap0rWpN9AmctCDWars/xbcpitw3WFNH2HEa3n82FOATu6\\nr43B4k3nEjEIJEqzqk0Zo2GIxp2WxQGYccWMVn78hBgMetINHYP5+hf47Gev\\nB8fZhw1dnDbB3oA1vtB9TcKdQm4nn3El3F3FRc7aYNOttvmvK14XFY+B0wXx\\nWs5xjktbtIbpvYdL51g/5UGkWP0yvAVKJmxybmAY74qXyK9mSB2IIo/g4ayX\\nXNvQ5FY8bV7g2q/R9weQ/vTjOLaH+XNQY3xFEQlo+MTKnHMNYoMlHhEtqP4N\\nBg6Sh5ZktleRvbgw/T69ZxMy6kQFgoQFKvtMILkaQw==\\n\",\"charge_tax\":false,\"id\":\"b935d2e7-7406-4a41-babf-6ecd10fd8428\",\"related\":{\"address\":\"94b38a19-99ae-4249-8fa8-722ff1f4922f\",\"users\":\"1862164b-e9bc-48f2-b48b-7dfe5c866834\"},\"links\":{\"self\":\"/companies?address_line1=500+Garden+St&address_line2=&charge_tax=false&city=Sydney&country=AUS&legal_name=Samuel%27s+Gardening+Pty+Ltd&name=Samuel%27s+Gardening&phone=%2B61491570156&state=NSW&tax_number=100200300&user_id=064d6800-fff3-11e5-86aa-5e5517507c66&zip=2000\"}}}",
+      "headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, Content-Type, Accept, Authorization, Token",
+        "Location": "/companies/b935d2e7-7406-4a41-babf-6ecd10fd8428",
+        "Access-Control-Allow-Methods": "POST, GET, PUT, DELETE, OPTIONS",
+        "Access-Control-Max-Age": "1728000",
+        "Access-Control-Request-Method": "*",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"5c2023ef567f0a9d62c27bb1596110df\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "3ac8d8e8-eec0-4e3d-a295-54282d4da0a8",
+        "X-Runtime": "0.403456",
+        "Connection": "close",
+        "Server": "thin"
+      },
+      "status_code": 201,
+      "type": "ok"
+    }
+  }
+]
