@@ -222,7 +222,33 @@ defmodule PromisepayEx do
   """
   defdelegate company(id), to: PromisepayEx.API.Companies
 
+  @doc """
+  Create a company.
+
+  POST /companies/
+  ## Reference
+
+      https://reference.assemblypayments.com/#create-company
+
+  ## Examples
+
+      PromisepayEx.create_company(options)
+
+  """
   defdelegate create_company(options), to: PromisepayEx.API.Companies
 
+  @doc """
+  Update a company.
+
+  PATCH /companies/
+  ## Reference
+
+      https://reference.assemblypayments.com/#update-company
+
+  ## Examples
+
+      PromisepayEx.update_company(options)
+
+  """
   defdelegate update_company(options), to: PromisepayEx.API.Companies
 end
