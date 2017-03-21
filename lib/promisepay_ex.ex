@@ -221,4 +221,6 @@ defmodule PromisepayEx do
 
   """
   defdelegate company(id), to: PromisepayEx.API.Companies
+
+  defdelegate create_company(options), to: PromisepayEx.API.Companies
 end

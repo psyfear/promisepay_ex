@@ -102,6 +102,15 @@ defmodule PromisepayEx.Client do
         }
       } ->
         {:ok, {401, headers, errors}}
+      {
+        :ok,
+        %HTTPoison.Response{
+          status_code: 201,
+          body: body,
+          headers: headers
+        }
+      } ->
+        {:ok, {201, headers, body}}
       {:ok, %HTTPoison.Response{status_code: 422}} ->
         {:error, "Not Found"}
       {:error, %HTTPoison.Error{reason: reason}} ->

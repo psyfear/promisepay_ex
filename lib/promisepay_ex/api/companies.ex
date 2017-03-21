@@ -22,4 +22,10 @@ defmodule PromisepayEx.API.Companies do
     %{companies: company} = request(:get, "/companies/#{id}", [])
     Parser.parse_company(company)
   end
+
+  def create_company(options) do
+    params = Parser.parse_request_params(options)
+    %{companies: company} = request(:post, "companies", params)
+    Parser.parse_company(company)
+  end
 end
