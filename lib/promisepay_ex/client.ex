@@ -102,6 +102,21 @@ defmodule PromisepayEx.Client do
         }
       } ->
         {:ok, {401, headers, errors}}
+
+
+
+      {
+        :ok,
+        %HTTPoison.Response{
+          status_code: 422,
+          body: errors,
+          headers: headers
+        }
+      } ->
+        {:ok, {422, headers, errors}}
+
+
+
       {
         :ok,
         %HTTPoison.Response{
