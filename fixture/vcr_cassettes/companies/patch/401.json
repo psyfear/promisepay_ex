@@ -1,0 +1,32 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Authorization": "***"
+      },
+      "method": "patch",
+      "options": [],
+      "request_body": "",
+      "url": "http://api.localhost.local:3000/companies/7b85aa9c-fc54-4449-afef-f52fc2b94cd3"
+    },
+    "response": {
+      "body": "{\"errors\":{\"token\":[\"is not authorized\"]}}",
+      "headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, Content-Type, Accept, Authorization, Token, APPROVE_TOKEN, MGMT_TOKEN, SIGNUP_TOKEN",
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "724acd51-4f2d-41d9-b1ba-b6dd5818d2a2",
+        "X-Runtime": "0.144017",
+        "Connection": "close",
+        "Server": "thin"
+      },
+      "status_code": 401,
+      "type": "ok"
+    }
+  }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": {
+        "basic_auth": [
+          "gary.test@promisepay.com",
+          "promisepay"
+        ]
+      },
+      "request_body": "",
+      "url": "http://api.localhost.local:3000//companies/f4318485-6291-46de-a331-7e94da56efd5?"
+    },
+    "response": {
+      "body": "{\"companies\":{\"legal_name\":\"Samuel's Gardening Pty Ltd\",\"name\":\"Samuel's Gardening\",\"tax_number\":\"QsYM70c5WnuViomEvjukRLf42R6vqHjcHx3RF3rb/Z76daEd0xiSshAE5+By\\nblrQ7SYK4KVBuhsGTnRU+Gkkw1wBwJjS/xdQmf46HqELwWSTOvjFtv6fDjJj\\nU10s/DeYtqbvl9/4lNsQnbGDLRkpslq1pOxGlQA4OFxWnoiCBtNRmgdn23sP\\nvGieodoOhJfi43pq4eXKBRf5aoso/axZ05zlAGimV2mQJc7WVKI5Mjj7Q7cf\\nsVbwh1jQx8Gh3FfjWFEUqnAfGyIypFTioyZSELoK9Slz2/yG2IweoA5Qn7bo\\nZcM8gKKpsfGNG873DRX0mxhLGbrF4zdhShHhpDZCyQ==\\n\",\"charge_tax\":false,\"id\":\"3815ea32-3b6d-4f48-b7a9-92d3f21d2367\",\"related\":{\"address\":\"fdc82f78-18c3-42f8-b03a-bebef7f49591\"},\"links\":{\"self\":\"/companies/f4318485-6291-46de-a331-7e94da56efd5\"}}}",
+      "headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, Content-Type, Accept, Authorization, Token",
+        "Access-Control-Allow-Methods": "POST, GET, PUT, DELETE, OPTIONS",
+        "Access-Control-Max-Age": "1728000",
+        "Access-Control-Request-Method": "*",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"2517f00c4f9593c1326ae4fefd4b3e34\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "2a83ef5a-cb35-4466-aa2c-07e3babc2c21",
+        "X-Runtime": "0.207018",
+        "Connection": "close",
+        "Server": "thin"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
