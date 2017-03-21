@@ -1,0 +1,39 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": {
+        "basic_auth": [
+          "gary.test@promisepay.com",
+          "promisepay"
+        ]
+      },
+      "request_body": "",
+      "url": "http://api.localhost.local:3000/companies/?"
+    },
+    "response": {
+      "body": "{\"companies\":[{\"legal_name\":\"Kreiger and Sons\",\"name\":\"Koch Group\",\"id\":\"2e03b7e8-e933-45a8-a0da-988b01327174\",\"related\":{\"address\":\"c87f10ee-68d8-42dd-a3de-4e94d50aaab3\",\"users\":\"824288de944a404ec860c46c5619ea1d\"},\"links\":{\"self\":\"/companies/2e03b7e8-e933-45a8-a0da-988b01327174\"}},{\"legal_name\":\"Gaylord-Walter\",\"name\":\"Hagenes, Schuppe and Friesen\",\"id\":\"7bcd0233-a0d3-401d-9639-2adb3e34eb18\",\"related\":{\"address\":\"b18af744-f319-496c-882e-d4da111bd362\",\"users\":\"4623792c46c89079386cd77e9445425a\"},\"links\":{\"self\":\"/companies/7bcd0233-a0d3-401d-9639-2adb3e34eb18\"}},{\"legal_name\":\"Gutkowski, Bins and Schmidt\",\"name\":\"Haley, McLaughlin and Krajcik\",\"id\":\"476f970e-a96e-4dc3-8dda-091407ec239b\",\"related\":{\"address\":\"18d28bb3-835b-4341-a12f-5fcf43bc15c7\",\"users\":\"f939d7be5955b17ee582613305ced47d\"},\"links\":{\"self\":\"/companies/476f970e-a96e-4dc3-8dda-091407ec239b\"}},{\"legal_name\":\"Gutkowski Group\",\"name\":\"Pouros LLC\",\"id\":\"b2918119-bae8-432c-8537-db242d9fb1d0\",\"related\":{\"address\":\"0b303729-4648-4fec-b91c-0e00e56e54d1\",\"users\":\"efdb028f2e2bee7a4db5991655010c76\"},\"links\":{\"self\":\"/companies/b2918119-bae8-432c-8537-db242d9fb1d0\"}},{\"legal_name\":\"Collins, MacGyver and Beatty\",\"name\":\"Stokes-Klocko\",\"id\":\"0868888a-5de7-4349-9bb3-ad2256c5b6fe\",\"related\":{\"address\":\"b673e037-100b-481b-8981-53e67e6bea4b\",\"users\":\"57c541be69db4a72d9561ae7b683553f\"},\"links\":{\"self\":\"/companies/0868888a-5de7-4349-9bb3-ad2256c5b6fe\"}},{\"legal_name\":\"Harber, Kiehn and Muller\",\"name\":\"Collins LLC\",\"id\":\"455ff85c-ba33-4cdc-ae11-328e4c5f69d5\",\"related\":{\"address\":\"94da35bc-32ad-4fe2-9a97-920c30b21997\",\"users\":\"aa9f2a17dae69f4bbe7a1304d196a129\"},\"links\":{\"self\":\"/companies/455ff85c-ba33-4cdc-ae11-328e4c5f69d5\"}},{\"legal_name\":\"Prosacco LLC\",\"name\":\"Streich-VonRueden\",\"id\":\"f7f594fb-96ee-4501-a8df-b6a5271f7f60\",\"related\":{\"address\":\"dc2ece67-db95-4edb-8405-acafa28f359c\",\"users\":\"2846f9ea852c2034f0edb3603870b62e\"},\"links\":{\"self\":\"/companies/f7f594fb-96ee-4501-a8df-b6a5271f7f60\"}},{\"legal_name\":\"COBALT REFINERY CO. INC.\",\"name\":\"COBALT REFINERY CO. INC.\",\"id\":\"56c2d3f7-dc64-4bce-afc3-788a7d4256eb\",\"related\":{\"address\":\"8fc7c733-427c-4ebf-a878-3646d75a83c2\",\"users\":\"c06cd997460f62952d9e5f0204965411\"},\"links\":{\"self\":\"/companies/56c2d3f7-dc64-4bce-afc3-788a7d4256eb\"}},{\"legal_name\":\"BNC\",\"name\":\"BNC\",\"id\":\"71f91dec-4946-4ef5-a899-6407c2889aae\",\"related\":{\"address\":\"bae5d338-23f0-42bb-b25f-1c6c40bfae9a\",\"users\":\"799eedd1c7a97ff9082a0aa6f2136faa\"},\"links\":{\"self\":\"/companies/71f91dec-4946-4ef5-a899-6407c2889aae\"}},{\"legal_name\":\"Tarh O Palayesh\",\"name\":\"Tarh O Palayesh\",\"id\":\"426fdd35-c3df-4447-bb5b-d15f5da1e21e\",\"related\":{\"address\":\"3244426f-8f97-4f4d-8a06-817692ccb0f9\",\"users\":\"419f437e3d6beec1957a52f97c0582f2\"},\"links\":{\"self\":\"/companies/426fdd35-c3df-4447-bb5b-d15f5da1e21e\"}}],\"meta\":{\"limit\":10,\"offset\":0,\"total\":10},\"links\":{\"self\":\"/companies\"}}",
+      "headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, Content-Type, Accept, Authorization, Token",
+        "Access-Control-Allow-Methods": "POST, GET, PUT, DELETE, OPTIONS",
+        "Access-Control-Max-Age": "1728000",
+        "Access-Control-Request-Method": "*",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"47f842eca87706f425cf6dd8486c1757\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "006806e5-c488-4e19-a300-eab5e3f49451",
+        "X-Runtime": "0.471626",
+        "Connection": "close",
+        "Server": "thin"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

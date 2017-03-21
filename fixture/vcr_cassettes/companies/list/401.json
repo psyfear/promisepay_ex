@@ -1,0 +1,35 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": {
+        "basic_auth": [
+          "test.test@test.com",
+          "test"
+        ]
+      },
+      "request_body": "",
+      "url": "http://api.localhost.local:3000/companies/?"
+    },
+    "response": {
+      "body": "{\"errors\":{\"token\":[\"is not authorized\"]}}",
+      "headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, Content-Type, Accept, Authorization, Token, APPROVE_TOKEN, MGMT_TOKEN, SIGNUP_TOKEN",
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "7174a8fa-fc56-4b10-a369-986a0b24d2bd",
+        "X-Runtime": "0.166343",
+        "Connection": "close",
+        "Server": "thin"
+      },
+      "status_code": 401,
+      "type": "ok"
+    }
+  }
+]
