@@ -24,8 +24,6 @@ defmodule GetCompaniesTest do
       api_domain: "api.localhost.local:3000",
     )
 
-    Config.filter_request_headers("Authorization")
-
     :ok
   end
 
