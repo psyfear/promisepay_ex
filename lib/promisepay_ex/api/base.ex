@@ -49,11 +49,11 @@ defmodule PromisepayEx.API.Base do
 
   @spec parse_result(Map.t) :: Map.t
   def parse_result(result) do
-    {:ok, {_response, _header, body}} = result
-    verify_response(JSON.decode!(body))
+    {:ok, {code, _header, body}} = result
+    verify_response(code, JSON.decode!(body))
   end
 
-  defp verify_response(body) do
+  defp verify_response(code, body) do
     if is_list(body) do
       body
     else
@@ -61,7 +61,11 @@ defmodule PromisepayEx.API.Base do
         nil ->
           body
         errors when is_list(errors) ->
-          parse_error(List.first(errors))
+          error = %{code: code, message: hd(errors)}
+          parse_error(error)
+        errors when is_map(errors) ->
+          error = %{code: code, message: errors}
+          parse_error(error)
         error ->
           raise(PromisepayEx.Error, message: inspect error)
       end
