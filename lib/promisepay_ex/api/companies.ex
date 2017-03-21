@@ -23,9 +23,18 @@ defmodule PromisepayEx.API.Companies do
     Parser.parse_company(company)
   end
 
+  @spec create_company(Keyword.t) :: Keyword.t
   def create_company(options) do
     params = Parser.parse_request_params(options)
     %{companies: company} = request(:post, "companies", params)
+    Parser.parse_company(company)
+  end
+
+  @spec update_company(Keyword.t) :: Keyword.t
+  def update_company(options) do
+    params = Parser.parse_request_params(options)
+    url = "companies/" <> options[:id]
+    %{companies: company} = request(:patch, url, params)
     Parser.parse_company(company)
   end
 end
