@@ -1,3 +1,5 @@
+Code.require_file("api_case.exs", "test/support")
+
 ExUnit.configure(
   formatters: [
     JUnitFormatter,
@@ -7,5 +9,3 @@ ExUnit.configure(
 )
 
 ExUnit.start()
-
-Code.require_file("support/api_case.exs", "test")
