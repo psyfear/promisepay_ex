@@ -7,3 +7,5 @@ ExUnit.configure(
 )
 
 ExUnit.start()
+
+Code.require_file("support/api_case.exs", "test")
