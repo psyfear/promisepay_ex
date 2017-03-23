@@ -1,31 +1,5 @@
 defmodule UpdateCompanyTest do
-  use ExUnit.Case
-  use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
-
-  alias ExVCR.Config
-
-  setup_all do
-    Config.cassette_library_dir(
-      "fixture/vcr_cassettes",
-      "fixture/custom_cassettes"
-    )
-
-    Config.filter_url_params(true)
-    Config.filter_request_headers("basic_auth")
-
-    :ok
-  end
-
-  setup do
-    PromisepayEx.configure(
-      username: "gary.test@promisepay.com",
-      password: "promisepay",
-      environment: "test",
-      api_domain: "api.localhost.local:3000",
-    )
-
-    :ok
-  end
+  use PromisepayEx.ApiCase
 
   test "update_company returns Map (200)" do
     use_cassette "companies/patch/200" do
