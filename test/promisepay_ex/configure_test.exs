@@ -24,7 +24,7 @@ defmodule ConfigureTest do
   end
 
   test "authenticated api request" do
-    use_cassette "items_request" do
+    use_cassette "items/list/200" do
       items = PromisepayEx.items()
       assert length(items) == 10
       assert hd(items).name == "toyota hilux35"
