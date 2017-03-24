@@ -2,7 +2,7 @@ defmodule GenerateTokenTest do
   use PromisepayEx.ApiCase
 
   test "generate_token returns Map" do
-    use_cassette "token_auths_request" do
+    use_cassette "generate_token/200" do
       options = %{
         token_type: "card",
         user_id: "064d6800-fff3-11e5-86aa-5e5517507c66"
@@ -17,7 +17,7 @@ defmodule GenerateTokenTest do
   end
 
   test "generate_token raises error when unauthorized" do
-    use_cassette "unauthorized_token_auths_request" do
+    use_cassette "generate_token/401" do
       options = %{
         token_type: "card",
         user_id: "064d6800-fff3-11e5-86aa-5e5517507c66"
