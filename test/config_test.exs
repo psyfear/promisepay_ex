@@ -1,5 +1,5 @@
 defmodule PromisepayEx.ConfigTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   alias PromisepayEx.Config
 
   test "auth initialization global" do

@@ -10,7 +10,7 @@ defmodule PromisepayEx.ApiCase do
 
   using do
     quote do
-      use ExUnit.Case
+      use ExUnit.Case, async: true
       use ExVCR.Mock, adapter: ExVCR.Adapter.Hackney
     end
   end
