@@ -251,4 +251,6 @@ defmodule PromisepayEx do
 
   """
   defdelegate update_company(options), to: PromisepayEx.API.Companies
+
+  defdelegate fees, to: PromisepayEx.API.Fees
 end

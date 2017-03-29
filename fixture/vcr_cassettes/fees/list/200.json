@@ -1,0 +1,39 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": {
+        "basic_auth": [
+          "test.test@example.com",
+          "test"
+        ]
+      },
+      "request_body": "",
+      "url": "http://api.localhost.local:3000/fees/?"
+    },
+    "response": {
+      "body": "{\"fees\":[{\"id\":\"58e15f18-500e-4cdc-90ca-65e1f1dce565\",\"created_at\":\"2016-12-14T03:58:50.859Z\",\"updated_at\":\"2016-12-14T03:58:50.859Z\",\"name\":\"Buyer Fee @ 10%\",\"fee_type_id\":2,\"amount\":1000,\"cap\":null,\"min\":null,\"max\":null,\"to\":\"buyer\",\"links\":{\"self\":\"/fees/58e15f18-500e-4cdc-90ca-65e1f1dce565\"}},{\"id\":\"a520ed0c-4dd7-4031-ba42-41a2b572ce13\",\"created_at\":\"2016-12-14T03:58:50.867Z\",\"updated_at\":\"2016-12-14T03:58:50.867Z\",\"name\":\"Seller Fee @ 3%\",\"fee_type_id\":2,\"amount\":300,\"cap\":null,\"min\":null,\"max\":null,\"to\":\"seller\",\"links\":{\"self\":\"/fees/a520ed0c-4dd7-4031-ba42-41a2b572ce13\"}},{\"id\":\"1dabd563-a0c8-433f-9ec2-e87ee27601b9\",\"created_at\":\"2016-12-14T03:58:50.872Z\",\"updated_at\":\"2016-12-14T03:58:50.872Z\",\"name\":\"PromisePay CC Surcharge\",\"fee_type_id\":2,\"amount\":210,\"cap\":null,\"min\":null,\"max\":null,\"to\":\"marketplace-cc\",\"links\":{\"self\":\"/fees/1dabd563-a0c8-433f-9ec2-e87ee27601b9\"}},{\"id\":\"d255443d-fb9f-47e0-a8d7-d40648266a9a\",\"created_at\":\"2016-12-14T03:58:50.877Z\",\"updated_at\":\"2016-12-14T03:58:50.877Z\",\"name\":\"PromisePay One Time Minimum Fee\",\"fee_type_id\":1,\"amount\":500,\"cap\":null,\"min\":null,\"max\":null,\"to\":\"marketplace-one-time-min\",\"links\":{\"self\":\"/fees/d255443d-fb9f-47e0-a8d7-d40648266a9a\"}},{\"id\":\"f0212dbc-8d20-4f54-bd61-b30797f7ba96\",\"created_at\":\"2016-12-14T03:58:50.881Z\",\"updated_at\":\"2016-12-14T03:58:50.881Z\",\"name\":\"PromisePay Fee\",\"fee_type_id\":2,\"amount\":150,\"cap\":null,\"min\":null,\"max\":null,\"to\":\"marketplace\",\"links\":{\"self\":\"/fees/f0212dbc-8d20-4f54-bd61-b30797f7ba96\"}},{\"id\":\"b5104be8-fb37-4b40-ab20-b30797f7ba96\",\"created_at\":\"2016-12-14T03:58:50.887Z\",\"updated_at\":\"2016-12-14T03:58:50.887Z\",\"name\":\"Credit Card Surcharge @ 2%\",\"fee_type_id\":2,\"amount\":200,\"cap\":null,\"min\":null,\"max\":null,\"to\":\"cc\",\"links\":{\"self\":\"/fees/b5104be8-fb37-4b40-ab20-b30797f7ba96\"}},{\"id\":\"0c060c16-9c32-4ba2-9fcf-6983700a1a7f\",\"created_at\":\"2016-12-14T03:58:50.891Z\",\"updated_at\":\"2016-12-14T03:58:50.891Z\",\"name\":\"PayPal Surcharge @ 3%\",\"fee_type_id\":2,\"amount\":300,\"cap\":null,\"min\":null,\"max\":null,\"to\":\"paypal_payout\",\"links\":{\"self\":\"/fees/0c060c16-9c32-4ba2-9fcf-6983700a1a7f\"}},{\"id\":\"6c920ec7-697b-449e-97c4-9e7a6bc933cc\",\"created_at\":\"2016-12-14T03:58:50.895Z\",\"updated_at\":\"2016-12-14T03:58:50.895Z\",\"name\":\"International wire transfer fee @ $25\",\"fee_type_id\":1,\"amount\":2500,\"cap\":null,\"min\":null,\"max\":null,\"to\":\"int_wire\",\"links\":{\"self\":\"/fees/6c920ec7-697b-449e-97c4-9e7a6bc933cc\"}},{\"id\":\"559b1ea5-5f75-4363-b639-54a6006cc830\",\"created_at\":\"2016-12-14T03:58:50.901Z\",\"updated_at\":\"2016-12-14T03:58:50.901Z\",\"name\":\"DD Fee @ 1%\",\"fee_type_id\":2,\"amount\":100,\"cap\":null,\"min\":null,\"max\":null,\"to\":\"direct_debit\",\"links\":{\"self\":\"/fees/559b1ea5-5f75-4363-b639-54a6006cc830\"}},{\"id\":\"41b887c0-6b3a-4dfb-a9aa-e70f1eeb8c1c\",\"created_at\":\"2016-12-15T04:53:55.909Z\",\"updated_at\":\"2016-12-15T04:53:55.909Z\",\"name\":\"Fee Name\",\"fee_type_id\":2,\"amount\":10000,\"cap\":null,\"min\":null,\"max\":null,\"to\":\"direct_debit\",\"links\":{\"self\":\"/fees/41b887c0-6b3a-4dfb-a9aa-e70f1eeb8c1c\"}}],\"meta\":{\"limit\":10,\"offset\":0,\"total\":13},\"links\":{\"self\":\"/fees\"}}",
+      "headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, Content-Type, Accept, Authorization, Token",
+        "Access-Control-Allow-Methods": "POST, GET, PUT, DELETE, OPTIONS",
+        "Access-Control-Max-Age": "1728000",
+        "Access-Control-Request-Method": "*",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"d6023e0d5be17e54107088f5de8a4666\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "94b16072-0d7c-4592-a9f5-7a31874ef800",
+        "X-Runtime": "0.746219",
+        "Connection": "close",
+        "Server": "thin"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
