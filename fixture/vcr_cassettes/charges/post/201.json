@@ -1,0 +1,40 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Authorization": "Basic Z2FyeS50ZXN0QHByb21pc2VwYXkuY29tOnByb21pc2VwYXk="
+      },
+      "method": "post",
+      "options": {
+        "recv_timeout": 50000,
+        "connect_timeout": 50000
+      },
+      "request_body": "",
+      "url": "http://api.localhost.local:3000/charges"
+    },
+    "response": {
+      "body": "{\"charges\":{\"id\":\"bb952c34-78a7-47b4-afb6-c89bfd93d62e\",\"name\":\"Charge bb952c34-78a7-47b4-afb6-c89bfd93d62e\",\"created_at\":\"2017-04-11T05:54:56.586Z\",\"updated_at\":\"2017-04-11T05:55:10.638Z\",\"state\":\"completed\",\"buyer_fees\":0,\"seller_fees\":0,\"credit_card_fee\":0,\"status\":22500,\"amount\":100,\"custom_descriptor\":null,\"custom_data\":null,\"account_id\":\"4901ef9f-3017-419c-88ae-641b232d25ec\",\"account_type\":\"credit card\",\"promisepay_fee\":3,\"currency\":\"AUD\",\"payment_method\":\"charge\",\"dynamic_descriptor\":\"100014012007103\",\"buyer_name\":\"Gerda\",\"buyer_email\":\"gerdadecio 1@gmail.com\",\"buyer_zip\":\"90210\",\"buyer_country\":\"AUS\",\"related\":{\"buyers\":\"chargebuyersample2\",\"sellers\":\"7d8b2152b87a76342d266f5a9dd47895\"},\"links\":{\"self\":\"/charges/bb952c34-78a7-47b4-afb6-c89bfd93d62e\",\"buyers\":\"/charges/bb952c34-78a7-47b4-afb6-c89bfd93d62e/buyers\",\"sellers\":\"/charges/bb952c34-78a7-47b4-afb6-c89bfd93d62e/sellers\",\"status\":\"/charges/bb952c34-78a7-47b4-afb6-c89bfd93d62e/status\",\"fees\":\"/charges/bb952c34-78a7-47b4-afb6-c89bfd93d62e/fees\",\"transactions\":\"/charges/bb952c34-78a7-47b4-afb6-c89bfd93d62e/transactions\",\"batch_transactions\":\"/charges/bb952c34-78a7-47b4-afb6-c89bfd93d62e/batch_transactions\"}}}",
+      "headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, Content-Type, Accept, Authorization, Token",
+        "Location": "/charges/bb952c34-78a7-47b4-afb6-c89bfd93d62e",
+        "Access-Control-Allow-Methods": "POST, GET, PUT, DELETE, OPTIONS",
+        "Access-Control-Max-Age": "1728000",
+        "Access-Control-Request-Method": "*",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"c0414a432131ac243e36f146acff83c5\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "04ac5209-4d65-46b3-8985-e5060235092e",
+        "X-Runtime": "19.012742",
+        "Connection": "close",
+        "Server": "thin"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

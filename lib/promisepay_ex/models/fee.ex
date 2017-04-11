@@ -5,8 +5,6 @@ defmodule PromisepayEx.Model.Fee do
   ## Reference
   https://reference.promisepay.com/#fees
   """
-
-
   defstruct amount: nil,
            cap: nil,
            created_at: nil,

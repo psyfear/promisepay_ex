@@ -1,0 +1,35 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": {
+        "Authorization": "Basic dGVzdC50ZXN0QGV4YW1wbGUuY29tOnRlc3Q="
+      },
+      "method": "post",
+      "options": {
+        "recv_timeout": 50000,
+        "connect_timeout": 50000
+      },
+      "request_body": "",
+      "url": "http://api.localhost.local:3000/charges?"
+    },
+    "response": {
+      "body": "{\"errors\":{\"token\":[\"is not authorized\"]}}",
+      "headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, Content-Type, Accept, Authorization, Token, APPROVE_TOKEN, MGMT_TOKEN, SIGNUP_TOKEN",
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "16a68c68-c1ec-4a8d-8ee3-3ac09cbb3b8e",
+        "X-Runtime": "0.099250",
+        "Connection": "close",
+        "Server": "thin"
+      },
+      "status_code": 401,
+      "type": "ok"
+    }
+  }
+]

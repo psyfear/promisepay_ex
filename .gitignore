@@ -29,3 +29,4 @@ erl_crash.dump
 /db
 /deps
 /*.ez
+snippet.ex
