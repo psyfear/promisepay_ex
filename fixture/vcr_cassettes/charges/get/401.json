@@ -1,0 +1,35 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": {
+        "basic_auth": [
+          "test.test@example.com",
+          "test"
+        ]
+      },
+      "request_body": "",
+      "url": "http://api.localhost.local:3000//charges/7b85aa9c-fc54-4449-afef-f52fc2b94cd3?"
+    },
+    "response": {
+      "body": "{\"errors\":{\"token\":[\"is not authorized\"]}}",
+      "headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, Content-Type, Accept, Authorization, Token, APPROVE_TOKEN, MGMT_TOKEN, SIGNUP_TOKEN",
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "6ece8176-029b-4c69-9559-d5ee0dfe72c7",
+        "X-Runtime": "0.174747",
+        "Connection": "close",
+        "Server": "thin"
+      },
+      "status_code": 401,
+      "type": "ok"
+    }
+  }
+]

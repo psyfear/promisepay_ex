@@ -60,6 +60,14 @@ defmodule PromisepayEx.Parser do
   end
 
   @doc """
+  Parse charge record from the API response json.
+  """
+  @spec parse_charge(Map.t) :: Map.t
+  def parse_charge(object) do
+    struct(PromisepayEx.Model.Charge, object)
+  end
+
+  @doc """
   Parse company record from the API response json.
   """
   @spec parse_company(Map.t) :: Map.t

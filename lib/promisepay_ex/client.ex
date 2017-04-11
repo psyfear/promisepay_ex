@@ -66,7 +66,15 @@ defmodule PromisepayEx.Client do
         }
       } ->
         {:ok, {401, headers, errors}}
-
+      {
+        :ok,
+        %HTTPoison.Response{
+          status_code: 422,
+          body: errors,
+          headers: headers
+        }
+      } ->
+        {:ok, {422, headers, errors}}
       {:ok, %HTTPoison.Response{status_code: 404}} ->
         {:error, "Not Found"}
       {:error, %HTTPoison.Error{reason: reason}} ->
@@ -92,7 +100,12 @@ defmodule PromisepayEx.Client do
 
   defp send_post_request(request, username, password) do
     headers = build_authorization_header(username, password)
-    response = HTTPoison.post(request, "", headers)
+    response = HTTPoison.post(
+      request,
+      "",
+      headers,
+      [timeout: 50_000, recv_timeout: 50_000]
+    )
 
     case response do
       {
@@ -136,8 +149,6 @@ defmodule PromisepayEx.Client do
     end
   end
 
-
-
   def perform_patch(_url, _params, nil, nil) do
     raise(PromisepayEx.Error, message: "Error")
   end
@@ -152,7 +163,12 @@ defmodule PromisepayEx.Client do
 
   defp send_patch_request(request, username, password) do
     headers = build_authorization_header(username, password)
-    response = HTTPoison.patch(request, "", headers)
+    response = HTTPoison.patch(
+      request,
+      "",
+      headers,
+      [timeout: 50_000, recv_timeout: 50_000]
+    )
 
     case response do
       {

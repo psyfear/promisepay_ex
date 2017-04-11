@@ -31,8 +31,8 @@ defmodule PromisepayEx.ApiCase do
 
   setup do
     PromisepayEx.configure(
-      username: "test.test@example.com",
-      password: "test",
+      username: "gary.test@promisepay.com",
+      password: "promisepay",
       environment: "test",
       api_domain: "api.localhost.local:3000",
     )

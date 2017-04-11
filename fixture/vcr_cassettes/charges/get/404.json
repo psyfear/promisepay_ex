@@ -1,0 +1,35 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": {
+        "basic_auth": [
+          "test@test.com",
+          "test"
+        ]
+      },
+      "request_body": "",
+      "url": "http://api.localhost.local:3000//charges/f4318485-6291-46de-a331-7e94da56efd5?"
+    },
+    "response": {
+      "body": "{\"errors\":{\"id\":[\"invalid\"]}}",
+      "headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, Content-Type, Accept, Authorization, Token, APPROVE_TOKEN, MGMT_TOKEN, SIGNUP_TOKEN",
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "46f46c82-4ae6-48ec-b66a-fcaaae10d64f",
+        "X-Runtime": "0.163412",
+        "Connection": "close",
+        "Server": "thin"
+      },
+      "status_code": 422,
+      "type": "ok"
+    }
+  }
+]

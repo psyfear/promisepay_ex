@@ -1,0 +1,40 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": {
+        "basic_auth": [
+          "test.test@test.com",
+          "test"
+        ]
+      },
+      "request_body": "",
+      "url": "http://api.localhost.local:3000/charges/?"
+    },
+    "response": {
+      "body": "{\"charges\":[{\"id\":\"f4a701cf-2950-4423-a6bf-604bcf846466\",\"name\":\"Charge f4a701cf-2950-4423-a6bf-604bcf846466\",\"created_at\":\"2017-04-11T05:18:46.232Z\",\"updated_at\":\"2017-04-11T05:19:02.278Z\",\"state\":\"completed\",\"buyer_fees\":0,\"seller_fees\":0,\"credit_card_fee\":0,\"status\":22500,\"amount\":2990,\"custom_descriptor\":null,\"custom_data\":null,\"account_id\":\"4901ef9f-3017-419c-88ae-641b232d25ec\",\"account_type\":\"credit card\",\"promisepay_fee\":107,\"currency\":\"AUD\",\"payment_method\":\"charge\",\"dynamic_descriptor\":\"100014012007078\",\"buyer_name\":\"Gerda\",\"buyer_email\":\"gerdadecio 1@gmail.com\",\"buyer_country\":\"AUS\",\"seller_name\":\"Gary Recksalt\",\"seller_email\":\"gary.test@promisepay.com\",\"seller_country\":\"AUS\",\"links\":{\"self\":\"/charges\",\"buyers\":\"/charges/f4a701cf-2950-4423-a6bf-604bcf846466/buyers\",\"sellers\":\"/charges/f4a701cf-2950-4423-a6bf-604bcf846466/sellers\",\"status\":\"/charges/f4a701cf-2950-4423-a6bf-604bcf846466/status\",\"fees\":\"/charges/f4a701cf-2950-4423-a6bf-604bcf846466/fees\",\"transactions\":\"/charges/f4a701cf-2950-4423-a6bf-604bcf846466/transactions\",\"batch_transactions\":\"/charges/f4a701cf-2950-4423-a6bf-604bcf846466/batch_transactions\"}}],\"links\":{\"self\":\"/charges\"},\"meta\":{\"limit\":10,\"offset\":0,\"total\":1}}",
+      "headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, Content-Type, Accept, Authorization, Token",
+        "Location": "/charges",
+        "Access-Control-Allow-Methods": "POST, GET, PUT, DELETE, OPTIONS",
+        "Access-Control-Max-Age": "1728000",
+        "Access-Control-Request-Method": "*",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"7eaa4cc57a5113454cd7e8decd99a809\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "99146ebf-19d5-45e0-9b04-2468634d88b2",
+        "X-Runtime": "0.553100",
+        "Connection": "close",
+        "Server": "thin"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

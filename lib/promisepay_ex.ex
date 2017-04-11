@@ -252,5 +252,65 @@ defmodule PromisepayEx do
   """
   defdelegate update_company(options), to: PromisepayEx.API.Companies
 
+  # -------------- Fees -------------
+  @doc """
+  Get Fees.
+
+  Get /fees/
+  ## Reference
+
+      https://reference.assemblypayments.com/#list-fees
+
+  ## Examples
+
+      PromisepayEx.fees
+
+  """
   defdelegate fees, to: PromisepayEx.API.Fees
+
+  # -------------- Charges -------------
+  @doc """
+  Get Charges.
+
+  Get /charges/
+  ## Reference
+
+      https://reference.assemblypayments.com/#list-charges
+
+  ## Examples
+
+      PromisepayEx.charges([limit: 10, offset: 1])
+
+  """
+  defdelegate charges, to: PromisepayEx.API.Charges
+
+  @doc """
+  Show Charge.
+
+  Get /charges/:id
+  ## Reference
+
+      https://reference.assemblypayments.com/#show-charge
+
+  ## Examples
+
+      PromisepayEx.charge("f4a701cf-2950-4423-a6bf-604bcf846466")
+
+  """
+  defdelegate charge(id), to: PromisepayEx.API.Charges
+
+  @doc """
+  Create a charge.
+
+  POST /charges/
+  ## Reference
+
+      https://reference.assemblypayments.com/#create-charge
+
+  ## Examples
+
+      PromisepayEx.create_charge(options)
+
+  """
+  defdelegate create_charge(options), to: PromisepayEx.API.Charges
 end
