@@ -83,6 +83,7 @@ defmodule PromisepayEx.Mixfile do
         "Wilfrido Nuqui",
         "James Dela Cruz",
         "Jessie Espesor",
+        "Rj Bernaldo",
       ],
       licenses: ["MIT"],
       links: %{"GitHub" => "https://github.com/psyfear/promisepay_ex"},
