@@ -313,4 +313,19 @@ defmodule PromisepayEx do
 
   """
   defdelegate create_charge(options), to: PromisepayEx.API.Charges
+  
+  @doc """
+  Retrieve a marketplace.
+
+  GET /marketplace/:id
+  ## Reference
+
+      https://reference.assemblypayments.com/#show-marketplace
+
+  ## Examples
+
+      PromisepayEx.marketplace('marketplace_id')
+
+  """
+  defdelegate marketplace(id), to: PromisepayEx.API.Marketplaces
 end

@@ -82,4 +82,12 @@ defmodule PromisepayEx.Parser do
   def parse_fee(object) do
     struct(PromisepayEx.Model.Fee, object)
   end
+  
+  @doc """
+  Parse marketplace record from the API response json.
+  """
+  @spec parse_marketplace(Map.t) :: Map.t
+  def parse_marketplace(object) do
+    struct(PromisepayEx.Model.Marketplace, object)
+  end
 end
