@@ -313,7 +313,7 @@ defmodule PromisepayEx do
 
   """
   defdelegate create_charge(options), to: PromisepayEx.API.Charges
-  
+
   @doc """
   Retrieve a marketplace.
 
